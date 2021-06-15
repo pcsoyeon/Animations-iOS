@@ -13,6 +13,7 @@
 		924301782678AE9D00EEEE28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924301762678AE9D00EEEE28 /* Main.storyboard */; };
 		9243017A2678AE9E00EEEE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924301792678AE9E00EEEE28 /* Assets.xcassets */; };
 		9243017D2678AE9E00EEEE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9243017B2678AE9E00EEEE28 /* LaunchScreen.storyboard */; };
+		924301872678B45600EEEE28 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924301862678B45600EEEE28 /* Entry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		924301792678AE9E00EEEE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9243017C2678AE9E00EEEE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9243017E2678AE9E00EEEE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		924301862678B45600EEEE28 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		9243016F2678AE9D00EEEE28 /* NaviBarAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				9243017E2678AE9E00EEEE28 /* Info.plist */,
+				9243018A2678B48E00EEEE28 /* Resources */,
+				924301892678B47400EEEE28 /* Supports */,
+				924301742678AE9D00EEEE28 /* ViewController.swift */,
+				924301862678B45600EEEE28 /* Entry.swift */,
+			);
+			path = NaviBarAnimation;
+			sourceTree = "<group>";
+		};
+		924301892678B47400EEEE28 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
 				924301702678AE9D00EEEE28 /* AppDelegate.swift */,
 				924301722678AE9D00EEEE28 /* SceneDelegate.swift */,
-				924301742678AE9D00EEEE28 /* ViewController.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		9243018A2678B48E00EEEE28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				924301762678AE9D00EEEE28 /* Main.storyboard */,
 				924301792678AE9E00EEEE28 /* Assets.xcassets */,
 				9243017B2678AE9E00EEEE28 /* LaunchScreen.storyboard */,
-				9243017E2678AE9E00EEEE28 /* Info.plist */,
 			);
-			path = NaviBarAnimation;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924301872678B45600EEEE28 /* Entry.swift in Sources */,
 				924301752678AE9D00EEEE28 /* ViewController.swift in Sources */,
 				924301712678AE9D00EEEE28 /* AppDelegate.swift in Sources */,
 				924301732678AE9D00EEEE28 /* SceneDelegate.swift in Sources */,
