@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9220C4512678B8AA00A78B65 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220C4502678B8AA00A78B65 /* EntryCell.swift */; };
 		924301712678AE9D00EEEE28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924301702678AE9D00EEEE28 /* AppDelegate.swift */; };
 		924301732678AE9D00EEEE28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924301722678AE9D00EEEE28 /* SceneDelegate.swift */; };
 		924301752678AE9D00EEEE28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924301742678AE9D00EEEE28 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9220C4502678B8AA00A78B65 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		9243016D2678AE9D00EEEE28 /* NaviBarAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaviBarAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924301702678AE9D00EEEE28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924301722678AE9D00EEEE28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				924301892678B47400EEEE28 /* Supports */,
 				924301742678AE9D00EEEE28 /* ViewController.swift */,
 				924301862678B45600EEEE28 /* Entry.swift */,
+				9220C4502678B8AA00A78B65 /* EntryCell.swift */,
 			);
 			path = NaviBarAnimation;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				924301872678B45600EEEE28 /* Entry.swift in Sources */,
+				9220C4512678B8AA00A78B65 /* EntryCell.swift in Sources */,
 				924301752678AE9D00EEEE28 /* ViewController.swift in Sources */,
 				924301712678AE9D00EEEE28 /* AppDelegate.swift in Sources */,
 				924301732678AE9D00EEEE28 /* SceneDelegate.swift in Sources */,
