@@ -62,9 +62,17 @@ class ViewController: UIViewController {
             self.lockBorder.center.y += yDelta
             self.bottomLock.center.y -= yDelta
         }, completion: { _ in
+            print("rotate")
             UIView.animate(withDuration: 0.5, animations: {
                 // Rotate keyhole.
                 self.lockKeyhole.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi))
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05, execute: {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.lockKeyhole.transform = .identity
+                    })
+                })
+                
             })
         })
         
