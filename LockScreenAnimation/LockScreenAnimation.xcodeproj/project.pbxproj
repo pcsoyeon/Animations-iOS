@@ -56,15 +56,31 @@
 		9220C45F2678C0EE00A78B65 /* LockScreenAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				9220C46E2678C0F000A78B65 /* Info.plist */,
+				92C5F4E6267A320D00D8977E /* Resources */,
+				92C5F4E4267A31F000D8977E /* Supports */,
+				9220C4642678C0EE00A78B65 /* ViewController.swift */,
+			);
+			path = LockScreenAnimation;
+			sourceTree = "<group>";
+		};
+		92C5F4E4267A31F000D8977E /* Supports */ = {
+			isa = PBXGroup;
+			children = (
 				9220C4602678C0EE00A78B65 /* AppDelegate.swift */,
 				9220C4622678C0EE00A78B65 /* SceneDelegate.swift */,
-				9220C4642678C0EE00A78B65 /* ViewController.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		92C5F4E6267A320D00D8977E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				9220C4662678C0EE00A78B65 /* Main.storyboard */,
 				9220C4692678C0F000A78B65 /* Assets.xcassets */,
 				9220C46B2678C0F000A78B65 /* LaunchScreen.storyboard */,
-				9220C46E2678C0F000A78B65 /* Info.plist */,
 			);
-			path = LockScreenAnimation;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
