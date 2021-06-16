@@ -25,12 +25,11 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Custom Methods
-    
     func openLock() {
-        UIView.animate(withDuration: 0.4, delay: 5.0, options: [], animations: {
+        UIView.animate(withDuration: 0.4, delay: 3.0, options: [], animations: {
             
             // Rotate keyhole.
-            self.lockKeyhole.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+            self.lockKeyhole.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
             
             }, completion: { _ in
                 UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
