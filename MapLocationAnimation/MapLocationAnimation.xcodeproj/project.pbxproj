@@ -13,6 +13,8 @@
 		922A5516267F78220003A047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A5514267F78220003A047 /* Main.storyboard */; };
 		922A5518267F78240003A047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922A5517267F78240003A047 /* Assets.xcassets */; };
 		922A551B267F78240003A047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A5519267F78240003A047 /* LaunchScreen.storyboard */; };
+		922A5528267F7B0E0003A047 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A5527267F7B0E0003A047 /* Annotation.swift */; };
+		922A552B267F7B9D0003A047 /* SonarAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A552A267F7B9D0003A047 /* SonarAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		922A5517267F78240003A047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922A551A267F78240003A047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922A551C267F78240003A047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922A5527267F7B0E0003A047 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		922A552A267F7B9D0003A047 /* SonarAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonarAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				922A5524267F78580003A047 /* Resources */,
 				922A5523267F783D0003A047 /* Supports */,
 				922A5512267F78220003A047 /* ViewController.swift */,
+				922A5527267F7B0E0003A047 /* Annotation.swift */,
+				922A552A267F7B9D0003A047 /* SonarAnnotationView.swift */,
 			);
 			path = MapLocationAnimation;
 			sourceTree = "<group>";
@@ -153,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922A552B267F7B9D0003A047 /* SonarAnnotationView.swift in Sources */,
 				922A5513267F78220003A047 /* ViewController.swift in Sources */,
 				922A550F267F78220003A047 /* AppDelegate.swift in Sources */,
+				922A5528267F7B0E0003A047 /* Annotation.swift in Sources */,
 				922A5511267F78220003A047 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

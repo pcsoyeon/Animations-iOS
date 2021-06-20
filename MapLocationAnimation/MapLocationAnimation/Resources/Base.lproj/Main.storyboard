@@ -29,6 +29,9 @@
                             <constraint firstItem="9vT-gC-aIq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xLV-1k-POi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="9vT-gC-aIq" id="Nht-UB-1ge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
