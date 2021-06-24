@@ -21,22 +21,15 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8t-PY-N9z">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="207" id="3tT-ia-Sd7"/>
-                                        </constraints>
                                         <state key="normal" title="NOTIFICATIONS"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Di-am-YPq">
                                         <rect key="frame" x="207" y="0.0" width="207" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="207" id="oiT-tU-JSW"/>
-                                        </constraints>
                                         <state key="normal" title="MY STUFF"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="5Di-am-YPq" firstAttribute="leading" secondItem="U8t-PY-N9z" secondAttribute="trailing" id="IWN-eA-cCh"/>
                                     <constraint firstAttribute="height" constant="50" id="Qvn-nQ-MW4"/>
                                 </constraints>
                             </stackView>
