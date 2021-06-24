@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         struct ConstraintIdentifiers {
             static let centerLeftConstraintIdentifier = "centerLeftConstraintIdentifier"
             static let centerRightConstraintIdentifier = "centerRightConstraintIdentifier"
-            static let widthConstraintIdentifier = "widthConstraintIdentifier"
         }
         
         struct ColorPalette {
@@ -45,29 +44,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavBar()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        setUpUnderlineView()
         
         notificationButton.tintColor = Constants.ColorPalette.green
         notificationButton.addTarget(self, action: #selector(touchUpNotificationButton(_:)), for: .touchUpInside)
         
         myStuffButton.tintColor = Constants.ColorPalette.green
         myStuffButton.addTarget(self, action: #selector(touchUpMyStuffButton(_:)), for: .touchUpInside)
-        
-        setUpUnderlineView()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        for constraint in underlineView.constraints {
-            if constraint.identifier == Constants.ConstraintIdentifiers.widthConstraintIdentifier {
-                constraint.constant = (optionBar.frame.width / 2.5)
-                self.view.layoutIfNeeded()
-            }
-        }
     }
 }
 
@@ -99,13 +82,11 @@ extension ViewController {
         
         let topConstraint = underlineView.topAnchor.constraint(equalTo: optionBar.bottomAnchor)
         let heightConstraint = underlineView.heightAnchor.constraint(equalToConstant: 2)
+        let widthConstraint = underlineView.widthAnchor.constraint(equalToConstant: (optionBar.frame.width / 2.5))
         
         let leftButton = optionBar.arrangedSubviews[0]
         let centerLeftConstraint = underlineView.centerXAnchor.constraint(equalTo: leftButton.centerXAnchor)
         centerLeftConstraint.identifier = Constants.ConstraintIdentifiers.centerLeftConstraintIdentifier
-        
-        let widthConstraint = underlineView.widthAnchor.constraint(equalToConstant: (optionBar.frame.width / 2.5))
-        widthConstraint.identifier = Constants.ConstraintIdentifiers.widthConstraintIdentifier
         
         NSLayoutConstraint.activate([topConstraint, heightConstraint, widthConstraint, centerLeftConstraint])
     }
