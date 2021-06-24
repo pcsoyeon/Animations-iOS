@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         }
     }
     
+    enum Side {
+        case left
+        case right
+    }
+    
     // MARK: - UIComponents
  
     @IBOutlet weak var optionBar: UIStackView!
@@ -46,7 +51,10 @@ class ViewController: UIViewController {
         super.viewWillAppear(true)
         
         notificationButton.tintColor = Constants.ColorPalette.green
+        notificationButton.addTarget(self, action: #selector(touchUpNotificationButton(_:)), for: .touchUpInside)
+        
         myStuffButton.tintColor = Constants.ColorPalette.green
+        myStuffButton.addTarget(self, action: #selector(touchUpMyStuffButton(_:)), for: .touchUpInside)
         
         setUpUnderlineView()
     }
@@ -63,7 +71,20 @@ class ViewController: UIViewController {
     }
 }
 
+
 extension ViewController {
+    
+    // MARK: - ActionMethods
+    @objc
+    func touchUpNotificationButton(_ sender: UIButton) {
+        animateUnderlineBar(underlineView, toSide: .left)
+    }
+    
+    @objc
+    func touchUpMyStuffButton(_ sender: UIButton) {
+        animateUnderlineBar(underlineView, toSide: .right)
+    }
+    
     
     // MARK: - CustomMethods
     
@@ -87,6 +108,42 @@ extension ViewController {
         widthConstraint.identifier = Constants.ConstraintIdentifiers.widthConstraintIdentifier
         
         NSLayoutConstraint.activate([topConstraint, heightConstraint, widthConstraint, centerLeftConstraint])
+    }
+    
+    func animateUnderlineBar(_ underlineView: Underline, toSide: Side) {
+        switch toSide {
+        case .left:
+            for constraint in underlineView.superview!.constraints {
+                if constraint.identifier == Constants.ConstraintIdentifiers.centerRightConstraintIdentifier {
+                    
+                    constraint.isActive = false
+                    
+                    let leftButton = optionBar.arrangedSubviews[0]
+                    let centerLeftConstraint = underlineView.centerXAnchor.constraint(equalTo: leftButton.centerXAnchor)
+                    centerLeftConstraint.identifier = Constants.ConstraintIdentifiers.centerLeftConstraintIdentifier
+                    
+                    NSLayoutConstraint.activate([centerLeftConstraint])
+                }
+            }
+            
+        case .right:
+            for constraint in underlineView.superview!.constraints {
+                if constraint.identifier == Constants.ConstraintIdentifiers.centerLeftConstraintIdentifier {
+                    
+                    constraint.isActive = false
+                    
+                    let rightButton = optionBar.arrangedSubviews[1]
+                    let centerRightConstraint = underlineView.centerXAnchor.constraint(equalTo: rightButton.centerXAnchor)
+                    centerRightConstraint.identifier = Constants.ConstraintIdentifiers.centerRightConstraintIdentifier
+                    
+                    NSLayoutConstraint.activate([centerRightConstraint])
+                }
+            }
+        }
+        
+        UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
+            self.view.layoutIfNeeded()
+            }, completion: nil)
     }
     
 }
