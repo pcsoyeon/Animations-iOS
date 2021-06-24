@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoadingDotsAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8i4-Iu-eJ7">
+                                <rect key="frame" x="87" y="348" width="240" height="164"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-75-NxH">
+                                        <rect key="frame" x="9" y="97" width="222" height="54"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="KrX-BS-eam">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="eWU-Cg-p2Q">
+                                                <rect key="frame" x="84" y="0.0" width="54" height="54"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-K3-GkV">
+                                                <rect key="frame" x="168" y="0.0" width="54" height="54"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="N5f-kb-FJd"/>
+                                            <constraint firstItem="eWU-Cg-p2Q" firstAttribute="leading" secondItem="KrX-BS-eam" secondAttribute="trailing" constant="30" id="cY3-hr-U2d"/>
+                                            <constraint firstItem="KrX-BS-eam" firstAttribute="leading" secondItem="d7K-75-NxH" secondAttribute="leading" id="kbP-Dv-6E8"/>
+                                            <constraint firstItem="hdP-K3-GkV" firstAttribute="leading" secondItem="eWU-Cg-p2Q" secondAttribute="trailing" constant="30" id="lgj-kH-E0h"/>
+                                            <constraint firstItem="KrX-BS-eam" firstAttribute="top" secondItem="d7K-75-NxH" secondAttribute="top" id="tdP-5u-F8k"/>
+                                            <constraint firstItem="eWU-Cg-p2Q" firstAttribute="top" secondItem="d7K-75-NxH" secondAttribute="top" id="wKs-Rq-e5T"/>
+                                            <constraint firstItem="hdP-K3-GkV" firstAttribute="top" secondItem="d7K-75-NxH" secondAttribute="top" id="zCG-5q-Ev8"/>
+                                            <constraint firstAttribute="trailing" secondItem="hdP-K3-GkV" secondAttribute="trailing" id="zkG-3N-wST"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JaS-Lg-Zny">
+                                        <rect key="frame" x="30" y="22" width="181" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="8n7-SF-8Xz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JaS-Lg-Zny" secondAttribute="trailing" constant="29" id="1Cw-1V-AWy"/>
+                                    <constraint firstItem="d7K-75-NxH" firstAttribute="top" secondItem="JaS-Lg-Zny" secondAttribute="bottom" constant="32" id="1jC-Hr-5Kj"/>
+                                    <constraint firstItem="d7K-75-NxH" firstAttribute="leading" secondItem="8i4-Iu-eJ7" secondAttribute="leading" constant="9" id="5vp-Lx-KeZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="d7K-75-NxH" secondAttribute="trailing" constant="9" id="6q4-7b-dzC"/>
+                                    <constraint firstItem="JaS-Lg-Zny" firstAttribute="leading" secondItem="8i4-Iu-eJ7" secondAttribute="leading" constant="30" id="T8R-4B-Bx6"/>
+                                    <constraint firstAttribute="height" constant="164" id="bQU-ZK-6ca"/>
+                                    <constraint firstItem="JaS-Lg-Zny" firstAttribute="top" secondItem="8i4-Iu-eJ7" secondAttribute="top" constant="22" id="hYy-Pi-Ph6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8i4-Iu-eJ7" secondAttribute="trailing" constant="87" id="bI5-63-hpS"/>
+                            <constraint firstItem="8i4-Iu-eJ7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="cug-si-kgB"/>
+                            <constraint firstItem="8i4-Iu-eJ7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="304" id="qle-0b-sbA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstDot" destination="KrX-BS-eam" id="oQJ-Ub-yhe"/>
+                        <outlet property="secondDot" destination="eWU-Cg-p2Q" id="dnb-l5-OL6"/>
+                        <outlet property="thirdDot" destination="hdP-K3-GkV" id="Pic-4Z-Jrj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213.04347826086959" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dot" width="54" height="54"/>
+        <image name="logo" width="402" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
