@@ -120,6 +120,9 @@ extension ViewController {
             
             foldBrandList = true
             
+            let rotate = CGAffineTransform(rotationAngle: .pi)
+            self.triangleButton.transform = rotate
+            
             self.listView.isHidden = false
             self.listViewHeightConstraint.constant = 305
             self.lensButtonTopConstraint.constant = 330
@@ -131,10 +134,13 @@ extension ViewController {
             
             foldBrandList = false
             
+            self.triangleButton.transform = .identity
+            
             self.listViewHeightConstraint.constant = 0
             self.lensButtonTopConstraint.constant = 25
-            
+
             UIView.animate(withDuration: 0.5) {
+//                self.listView.transform = .identity
                 self.view.layoutIfNeeded()
             }
             
