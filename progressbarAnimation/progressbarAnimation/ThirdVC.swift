@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ThirdVC.swift
 //  progressbarAnimation
 //
 //  Created by soyeon on 2021/06/29.
@@ -7,18 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ThirdVC: UIViewController {
 
     var progressView: UIProgressView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         initProgressView()
-        
-//        UIView.animate(withDuration: 0.4, delay: 3.0) {
-//            self.updateProgressView()
-//        }
         
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateProgressView), userInfo: nil, repeats: true)
     }
@@ -30,7 +26,7 @@ class ViewController: UIViewController {
         progressView.isHidden = false
         
         // Set progressView2's initialize progress value.
-        progressView.progress = 0
+        progressView.progress = 0.5
         
         // Set translatesAutoresizingMaskIntoConstraints property value to false, so that you can change progressView2's layout constraints in swift source code.
         progressView.translatesAutoresizingMaskIntoConstraints = false
@@ -53,19 +49,18 @@ class ViewController: UIViewController {
 
     @objc func updateProgressView() {
         UIView.animate(withDuration: 0.3) {
-            if self.progressView.progress != 0.25 {
-                self.progressView.setProgress(0.25, animated: true)
+            if self.progressView.progress != 0.75 {
+                self.progressView.setProgress(0.75, animated: true)
             }
         }
+        
     }
     
-    // touchUpNext+Button까지 네이밍 할 것인지?
     @IBAction func touchUpNext(_ sender: Any) {
-        guard let dvc = self.storyboard?.instantiateViewController(identifier: "SecondVC") as? SecondVC else {
+        guard let dvc = self.storyboard?.instantiateViewController(identifier: "FourthVC") as? FourthVC else {
             return
         }
         navigationController?.pushViewController(dvc, animated: true)
     }
     
 }
-
