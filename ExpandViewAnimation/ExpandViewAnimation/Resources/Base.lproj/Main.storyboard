@@ -115,20 +115,88 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--SelectVC-->
         <scene sceneID="Bna-HO-yfM">
             <objects>
-                <viewController id="YnD-wF-UTw" sceneMemberID="viewController">
+                <viewController id="YnD-wF-UTw" customClass="SelectVC" customModule="ExpandViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="woP-Kx-ICS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w74-ZW-Zg8">
+                                <rect key="frame" x="49" y="129" width="317" height="73"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="브랜드를 선택해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gT-wq-ABa">
+                                        <rect key="frame" x="8" y="26" width="157" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2as-D2-AeR">
+                                        <rect key="frame" x="292" y="25" width="17" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="cKV-ST-ofW"/>
+                                            <constraint firstAttribute="width" constant="17" id="o06-jA-R2O"/>
+                                        </constraints>
+                                        <state key="normal" image="arrowtriangle.down.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="2as-D2-AeR" firstAttribute="top" secondItem="w74-ZW-Zg8" secondAttribute="top" constant="25" id="PZN-Py-FZQ"/>
+                                    <constraint firstAttribute="height" constant="73" id="RJS-1j-Bc0"/>
+                                    <constraint firstItem="7gT-wq-ABa" firstAttribute="top" secondItem="w74-ZW-Zg8" secondAttribute="top" constant="26" id="bNH-nj-Udx"/>
+                                    <constraint firstAttribute="trailing" secondItem="2as-D2-AeR" secondAttribute="trailing" constant="8" id="el2-qk-q4D"/>
+                                    <constraint firstItem="7gT-wq-ABa" firstAttribute="leading" secondItem="w74-ZW-Zg8" secondAttribute="leading" constant="8" id="hRm-G0-fji"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOt-Vs-dRf">
+                                <rect key="frame" x="49" y="224" width="317" height="73"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="렌즈를 선택해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWw-ff-xi9">
+                                        <rect key="frame" x="8" y="26" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jE-2d-hQb">
+                                        <rect key="frame" x="292" y="26" width="17" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="17" id="CcZ-Cz-LZ7"/>
+                                            <constraint firstAttribute="height" constant="22" id="SG8-81-l3h"/>
+                                        </constraints>
+                                        <state key="normal" image="arrowtriangle.down.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="6YB-rw-gFY"/>
+                                    <constraint firstItem="VWw-ff-xi9" firstAttribute="top" secondItem="zOt-Vs-dRf" secondAttribute="top" constant="26" id="UMr-YC-qw2"/>
+                                    <constraint firstItem="5jE-2d-hQb" firstAttribute="top" secondItem="zOt-Vs-dRf" secondAttribute="top" constant="26" id="aAJ-j2-Ra9"/>
+                                    <constraint firstItem="VWw-ff-xi9" firstAttribute="leading" secondItem="zOt-Vs-dRf" secondAttribute="leading" constant="8" id="c7t-a7-JyM"/>
+                                    <constraint firstAttribute="trailing" secondItem="5jE-2d-hQb" secondAttribute="trailing" constant="8" id="v92-kD-OdF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iq2-Xf-e9K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="iq2-Xf-e9K" firstAttribute="trailing" secondItem="zOt-Vs-dRf" secondAttribute="trailing" constant="48" id="C8r-Zp-MXb"/>
+                            <constraint firstItem="zOt-Vs-dRf" firstAttribute="leading" secondItem="iq2-Xf-e9K" secondAttribute="leading" constant="49" id="aV0-A6-rRc"/>
+                            <constraint firstItem="w74-ZW-Zg8" firstAttribute="leading" secondItem="iq2-Xf-e9K" secondAttribute="leading" constant="49" id="emn-Zq-Vfx"/>
+                            <constraint firstItem="iq2-Xf-e9K" firstAttribute="trailing" secondItem="w74-ZW-Zg8" secondAttribute="trailing" constant="48" id="eoA-eL-sQU"/>
+                            <constraint firstItem="w74-ZW-Zg8" firstAttribute="top" secondItem="iq2-Xf-e9K" secondAttribute="top" constant="85" id="roP-vi-egh"/>
+                            <constraint firstItem="zOt-Vs-dRf" firstAttribute="top" secondItem="w74-ZW-Zg8" secondAttribute="bottom" constant="22" id="vYg-2j-6um"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="brandSelectButton" destination="w74-ZW-Zg8" id="7mc-J2-kfK"/>
+                        <outlet property="lensSelectButton" destination="zOt-Vs-dRf" id="0xC-iB-nmN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rnl-ac-dE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="88"/>
+            <point key="canvasLocation" x="921.73913043478262" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
